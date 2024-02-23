@@ -1,0 +1,957 @@
+.bottomCV-btn {
+  position: relative;
+
+  @include min-screen($breakP) {
+    height: 60px;
+    margin: 0 auto;
+    width: 340px;
+
+    &:hover {
+
+      &:before {
+        color: #666666;
+      }
+
+      .bottomCV-btn {
+
+        &__link {
+          background-color: #ffffff;
+          color: #666666;
+        }
+      }
+    }
+  }
+
+  @include max-screen($breakP) {
+    height: 50px;
+    width: 100%;
+  }
+
+  &:before {
+    color: #ffffff;
+    content: '＞';
+    line-height: 1;
+    position: absolute;
+    top: 50%;
+    transform: scale(.6, 1) translate(0, -50%);
+    transition: .3s;
+    z-index: 1;
+
+    @include min-screen($breakP) {
+      font-size: 14px;
+      right: 30px;
+    }
+
+    @include max-screen($breakP) {
+      font-size: 9px;
+      right: 15px;
+    }
+  }
+
+  &__link {
+    align-items: center;
+    background-color: #666666;
+    border: 1px solid #666666;
+    color: #ffffff;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    letter-spacing: .15em;
+    position: relative;
+    transition: .3s;
+    width: 100%;
+
+    @include min-screen($breakP) {
+      font-size: 16px;
+
+      @include lhCrop(28 / 16);
+    }
+
+    @include max-screen($breakP) {
+      font-size: 12px;
+
+      @include lhCrop(30 / 24);
+    }
+  }
+}
+
+.bottomArea {
+  @include min-screen($breakP) {
+    padding: 45px 0 115px;
+  }
+
+  @include max-screen($breakP) {
+    padding: 40px;
+  }
+
+  .caption {
+
+    & + .bottomCV-btn {
+      @include min-screen($breakP) {
+        margin-top: 100px;
+      }
+
+      @include max-screen($breakP) {
+        margin-top: 50px;
+      }
+    }
+  }
+
+  &__inner {
+    margin: 0 auto;
+    max-width: 1000px;
+    width: 100%;
+  }
+}
+
+.pageDirection {
+  background-color: #292929;
+
+  &__inner {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    position: relative;
+
+    @include min-screen($breakP) {
+      margin: 0 auto;
+      max-width: 1000px;
+      padding: 18px 0;
+      width: 100%;
+    }
+
+    @include max-screen($breakP) {
+      padding: 15px 40px;
+    }
+
+    &:before {
+      background-color: #666666;
+      content: '';
+      left: 50%;
+      position: absolute;
+      top: 50%;
+      transform: translate(-50%, -50%);
+
+      @include min-screen($breakP) {
+        height: 20px;
+        width: 1px;
+      }
+
+      @include max-screen($breakP) {
+        height: 20px;
+        width: 1px;
+      }
+    }
+  }
+
+  &__link {
+    color: #ffffff;
+    display: block;
+    letter-spacing: .1em;
+    line-height: 1.2;
+    position: relative;
+    transition: .3s;
+
+    @include min-screen($breakP) {
+      font-size: 14px;
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    @include max-screen($breakP) {
+      font-size: 12px;
+    }
+
+    &:before {
+      background-color: #ffffff;
+      content: '';
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+
+      @include min-screen($breakP) {
+        height: 1px;
+        width: 10px;
+      }
+
+      @include max-screen($breakP) {
+        height: 1.5px;
+        width: 5.5px;
+      }
+    }
+
+    &--previous {
+      @include min-screen($breakP) {
+        padding-left: 30px;
+      }
+
+      @include max-screen($breakP) {
+        padding-left: 16px;
+      }
+
+      &:before {
+        left: 0;
+      }
+    }
+
+    &--next {
+      @include min-screen($breakP) {
+        padding-right: 30px;
+      }
+
+      @include max-screen($breakP) {
+        padding-right: 16px;
+      }
+
+      &:before {
+        right: 0;
+      }
+    }
+  }
+}
+
+.footer-contact {
+  background-color: #333333;
+  color: #ffffff;
+
+  @include min-screen($breakP) {
+    padding: 75px 80px 80px;
+    text-align: center;
+  }
+
+  @include max-screen($breakP) {
+    padding: 60px 40px 65px;
+  }
+
+  &__title {
+    @include min-screen($breakP) {
+      font-size: 12px;
+      letter-spacing: .15em;
+
+      @include lhCrop(18/12);
+    }
+
+    @include max-screen($breakP) {
+      font-size: 10px;
+      letter-spacing: .02em;
+
+      @include lhCrop(1.5);
+    }
+  }
+
+  &__tel {
+    color: #ffffff;
+    display: flex;
+    font-family: $font-en;
+    letter-spacing: .11em;
+    line-height: .75;
+
+    @include min-screen($breakP) {
+      align-items: center;
+      font-size: 26px;
+      justify-content: center;
+      margin-top: 40px;
+      pointer-events: none;
+    }
+
+    @include max-screen($breakP) {
+      align-items: flex-start;
+      font-size: 20px;
+      justify-content: flex-start;
+      margin-top: 25px;
+    }
+
+    img {
+      @include min-screen($breakP) {
+        margin-right: 14px;
+        width: 16px;
+      }
+
+      @include max-screen($breakP) {
+        margin-right: 11px;
+        width: 15px;
+      }
+    }
+  }
+
+  &__schedule {
+    color: #cccccc;
+    letter-spacing: .15em;
+
+    @include min-screen($breakP) {
+      @include lhCrop(1.6);
+
+      font-size: 10px;
+      margin-top: 30px;
+    }
+
+    @include max-screen($breakP) {
+      font-size: 10px;
+      margin-top: 20px;
+
+      @include lhCrop(1.5);
+    }
+  }
+
+  &__closed {
+    color: #eb6877;
+    letter-spacing: .15em;
+
+    @include min-screen($breakP) {
+      @include lhCrop(1.6);
+
+      font-size: 10px;
+      margin-top: 20px;
+    }
+
+    @include max-screen($breakP) {
+      font-size: 8px;
+      margin-top: 20px;
+
+      @include lhCrop(26/16);
+    }
+  }
+
+  &__intro {
+    display: block;
+  }
+
+  &__about {
+    @include max-screen($breakP) {
+      display: inline-block;
+    }
+  }
+
+  .site-heading {
+    @include max-screen($breakP) {
+      display: inline-block;
+    }
+  }
+}
+
+.footer-landline {
+  @include min-screen($breakP) {
+    margin-top: 65px;
+  }
+
+  @include max-screen($breakP) {
+    margin-top: 50px;
+  }
+
+  &__txt {
+    color: #999999;
+
+    @include min-screen($breakP) {
+      font-size: 10px;
+      letter-spacing: .15em;
+
+      @include lhCrop(16/10);
+    }
+
+    @include max-screen($breakP) {
+      font-size: 8px;
+
+      @include lhCrop(26/16);
+    }
+  }
+
+  &__tel {
+    color: #ffffff;
+    display: block;
+    font-family: $font-en;
+    letter-spacing: .11em;
+
+    @include min-screen($breakP) {
+      font-size: 20px;
+      margin-top: 5px;
+      pointer-events: none;
+
+      @include lhCrop(1.5);
+    }
+
+    @include max-screen($breakP) {
+      font-size: 20px;
+      margin-top: 5px;
+
+      @include lhCrop(1.5);
+    }
+  }
+}
+
+.footer-subNav {
+  @include min-screen($breakP) {
+    margin-top: 75px;
+  }
+
+  @include max-screen($breakP) {
+    margin-top: 50px;
+  }
+
+  &__link {
+    align-items: center;
+    color: #ffffff;
+    display: flex;
+    position: relative;
+
+    @include min-screen($breakP) {
+      display: inline-block;
+      font-size: 12px;
+      letter-spacing: .1em;
+      padding-left: 20px;
+      transition: .3s;
+
+      @include lhCrop(18/12);
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    @include max-screen($breakP) {
+      font-size: 10px;
+      justify-content: flex-start;
+      letter-spacing: .1em;
+      padding-left: 22.5px;
+
+      @include lhCrop(28/20);
+    }
+
+    &:not(:last-of-type) {
+      @include min-screen($breakP) {
+        margin-right: 35px;
+      }
+
+      @include max-screen($breakP) {
+        margin-bottom: 20px;
+      }
+    }
+  }
+
+  &__icon {
+    left: 0;
+    position: absolute;
+    top: 50%;
+    transform: translate(0, -50%);
+
+    @include min-screen($breakP) {
+      width: 11px;
+    }
+
+    @include max-screen($breakP) {
+      width: 12px;
+    }
+  }
+}
+
+.footer-recommend {
+  background-color: #222222;
+  color: #ffffff;
+
+  @include min-screen($breakP) {
+    padding: 80px 0;
+  }
+
+  @include max-screen($breakP) {
+    padding: 45px 40px 30px;
+  }
+
+  &__inner {
+    @include min-screen($breakP) {
+      margin: 0 auto;
+      max-width: 1000px;
+      width: 100%;
+    }
+  }
+
+  &__title {
+    @include min-screen($breakP) {
+      font-size: 14px;
+      letter-spacing: .15em;
+      text-align: center;
+
+      @include lhCrop(24/14);
+    }
+
+    @include max-screen($breakP) {
+      font-size: 12px;
+      letter-spacing: .1em;
+
+      @include lhCrop(34/24);
+    }
+  }
+
+  &__iframe {
+    @include min-screen($breakP) {
+      height: 231px;
+      margin-top: 30px;
+      width: 100%;
+    }
+
+    @include max-screen($breakP) {
+      height: 208px;
+      margin: 25px calc(50% - 50vw) 0;
+      width: 100vw;
+    }
+  }
+}
+
+.footer-otherArea {
+  border-top: 1px solid #666666;
+
+  @include min-screen($breakP) {
+    margin-top: 45px;
+    padding-top: 30px;
+    text-align: center;
+  }
+
+  @include max-screen($breakP) {
+    margin-top: 30px;
+    padding-top: 22.5px;
+  }
+
+  &__link {
+    color: #ffffff;
+    display: inline-block;
+    letter-spacing: .15em;
+    position: relative;
+    transition: .3s;
+
+    @include min-screen($breakP) {
+      font-size: 14px;
+      padding-left: 30px;
+
+      @include lhCrop(24/14);
+
+      &:hover {
+        opacity: .7;
+      }
+    }
+
+    @include max-screen($breakP) {
+      font-size: 12px;
+      padding-left: 25px;
+
+      @include lhCrop(34/24);
+    }
+
+    .svgIcon {
+      left: 0;
+      position: absolute;
+      top: 50%;
+      transform: translate(0, -50%);
+
+      &__path {
+        fill: none;
+        fill-rule: evenodd;
+        stroke: #ffffff;
+        stroke-width: 1px;
+      }
+
+      &--external {
+        @include min-screen($breakP) {
+          width: 18px;
+        }
+
+        @include max-screen($breakP) {
+          width: 12px;
+        }
+      }
+    }
+  }
+}
+
+.bnrSumaiGallery {
+  display: block;
+
+  @include min-screen($breakP) {
+    margin: 30px auto 0;
+    width: 295px;
+
+    &:hover {
+
+      .bnrSumaiGallery {
+
+        &__image {
+          opacity: .7;
+        }
+      }
+    }
+  }
+
+  @include max-screen($breakP) {
+    margin-top: 28px;
+  }
+
+  &__image {
+    transition: .3s;
+  }
+}
+
+.footer-corporateArea {
+  @include min-screen($breakP) {
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 40px;
+  }
+}
+
+.footer-corporateList {
+  align-items: flex-start;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  position: relative;
+
+  &__item {
+    @include min-screen($breakP) {
+      height: 110px;
+      padding: 0 40px;
+      position: relative;
+      width: auto;
+
+      &:first-of-type {
+        padding-left: 0;
+      }
+
+      &:not(:last-of-type) {
+
+        &:after {
+          background-color: #cccccc;
+          content: '';
+          height: 40px;
+          position: absolute;
+          right: 0;
+          top: 50%;
+          transform: translate(0, -50%);
+          width: 1px;
+        }
+      }
+    }
+
+    @include max-screen($breakP) {
+      height: 80px;
+      width: 100%;
+    }
+  }
+
+  &__link {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    width: 100%;
+  }
+
+  &__logo {
+
+    &--mitsubishi {
+      @include min-screen($breakP) {
+        width: 200px;
+      }
+
+      @include max-screen($breakP) {
+        width: 148px;
+      }
+    }
+
+    &--mitsubishisoko {
+      @include min-screen($breakP) {
+        width: 125px;
+      }
+
+      @include max-screen($breakP) {
+        width: 84.5px;
+      }
+    }
+
+    &--daiei {
+      @include min-screen($breakP) {
+        width: 144px;
+      }
+
+      @include max-screen($breakP) {
+        width: 104px;
+      }
+    }
+  }
+
+  &--multiple {
+
+    &:before,
+    &:after {
+      @include max-screen($breakP) {
+        background-color: #cccccc;
+        content: '';
+        left: 50%;
+        position: absolute;
+        top: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &:before {
+      height: 1px;
+      width: 50px;
+    }
+
+    &:after {
+      height: 25px;
+      width: 1px;
+    }
+
+    .footer-corporateList {
+
+      &__item {
+        @include max-screen($breakP) {
+          width: 50%;
+        }
+      }
+    }
+  }
+}
+
+.footer-copyright {
+  @include max-screen($breakP) {
+    padding: 0 20px;
+  }
+
+  &__txt {
+    color: #666666;
+    font-family: $font-en;
+    letter-spacing: .04em;
+
+    @include min-screen($breakP) {
+      font-size: 10px;
+      text-align: right;
+
+      @include lhCrop(16/10);
+    }
+
+    @include max-screen($breakP) {
+      border-top: 1px solid #cccccc;
+      font-size: 9px;
+      padding: 25px 0 45px;
+
+      @include lhCrop(30/18);
+    }
+  }
+}
+.dummy-header img {
+  max-width: 1440px; 
+  display: block;
+  margin: 0 auto; 
+}
+
+.footer {}
+.footer-infoArea {
+  background-color: #e0e0e0;
+  &__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 80px 0;
+  }
+  &__heading {
+    span {
+      display: block;
+      text-align: center;
+      font-size: 30px;
+    }
+    .ja {
+      margin-top: 40px;
+    }
+    .en {
+      font-size: 0.4em;
+    }
+  }
+  &__text {
+    margin-top: 30px;
+    text-align: center;
+    line-height: 1.85;
+    font-size: 14px;
+  }
+}
+.footer-cvArea {
+  &__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 0 80px;
+    display: flex;
+    justify-content: space-between;
+  }
+  &__btn {
+    max-width: 470px;
+  }
+}
+.cvBtn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  color: #fff;
+  font-size: 18px;
+  padding: 25px 0;
+  position: relative;
+  font-size: 15px;
+  &--req {
+    background-color: #333;
+  }
+  &--res {
+    background-color: #666;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 25px;
+    width: 5px;
+    height: 5px;
+    border: 5px solid transparent;
+    border-left: 5px solid #fff;
+  }
+}
+
+.footer-captionArea {
+  background-color: #333;
+  &__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+  &__text {
+    color: #fff;
+  }
+}
+
+.footer-nav {
+  background-color: #666;
+  &__inner {
+    max-width: 1000px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+    padding: 5px 0 10px;
+  }
+  &__item {
+    color: #fff;
+    &:not(:last-child) {
+      margin-right: 30px;
+    }
+    &.is-active {
+      border-bottom: 1px solid #fff;
+    }
+    a {
+      color: inherit;
+      font-size: 10px;
+    }
+  }
+}
+
+
+.footer-contact {
+  background-color: #333;
+  padding: 50px 0 40px;
+  margin: 0 auto;
+  &__inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__title {
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  &__tel {
+    margin-top: 0;
+    font-size: 38px;
+    font-family: 'Cormorant Infant', 'YakuHanMP', 'Noto Serif JP', 'YuMincho', 'Hiragino Mincho ProN', 'Yu Mincho', 'MS PMincho', serif;
+    color: #fff;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    img {
+      vertical-align: middle;
+      margin-right: 10px;
+      width: 32px;
+    }
+
+  }
+  &__schedule {
+    margin-top: 0;
+    margin-left: 10px;
+    color: #fff;
+    font-size: 11px;
+    letter-spacing: 0.08em;
+  }
+}
+
+.footer-bnrArea {
+  background-color: #333;
+  &__inner {
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    padding: 0 0 40px;
+  }
+  &__item {
+    max-width: 314px;
+  }
+}
+
+.footer-corporateArea {
+  background-color: #fff;
+  &__inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 40px 0;
+  }
+}
+.footer-corporateList {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  &__item {
+    max-width: 190px;
+    padding: 0;
+    &:not(:last-child) {
+      margin-right: 45px;
+    }
+    &:first-of-type {
+      padding-left: unset;
+      padding-right: unset;
+    }
+    &:not(:last-of-type)::after {
+      display: none;
+    }
+    span {
+      display: block;
+      text-align: left;
+      font-size: 10px;
+      margin-bottom: 10px;
+      letter-spacing: 0.08em;
+    }
+    a {
+      display: block;
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+.footer-copyright {
+  background-color: #e0e0e0;
+  &__txt {
+    color: #666;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 10px;
+    letter-spacing: 0.08em;
+  }
+}

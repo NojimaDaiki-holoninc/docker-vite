@@ -11,15 +11,14 @@ _%>
 <html lang="ja">
   <head>
     <%- include('lib/components/metadata',metaInfo); %>
-    <link rel="stylesheet" href="<%= metaInfo.rootDirectory %>scss/style/style.scss">
-    <script type="module" defer src="<%= metaInfo.rootDirectoryt %>js/main.js"></script>
-    <script type="module" defer src="<%= metaInfo.rootDirectory %>js/test.js"></script>
+    <link rel="stylesheet" href="<%= metaInfo.rootDirectory %>common/css/common.scss">
+    <script defer src="<%= metaInfo.rootDirectoryt %>common/js/lib.js"></script>
   </head>
   <body> 
-    <main class="st-glb_mainContent">
-      <article class="st-glb_mainContent-article">
-        <%- include('lib/components/header', metaInfo); %>
-      </article>
+    <%- include('common/inc/header', metaInfo); %>
+    <main class="main">
+      
     </main>
+    <%- include('common/inc/footer', metaInfo); %>
   </body>
 </html>

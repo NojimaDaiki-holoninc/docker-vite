@@ -1,0 +1,49 @@
+body {
+    border: none;
+    margin: 0;
+    padding: 0;
+}
+
+
+/* image */
+
+img,
+div,
+p,
+blockquote,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+ul,
+ol,
+li,
+dl,
+dt,
+dd,
+form,
+fieldset,
+textarea {
+    border: 0;
+    font-size: 100%;
+    font-style: normal;
+    font-weight: normal;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+a {
+    cursor: pointer;
+}
+
+table {
+    font-size: 100%;
+}
+
+hr.separator {
+    display: none;
+}

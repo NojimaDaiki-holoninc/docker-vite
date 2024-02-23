@@ -1,0 +1,120 @@
+$breakP: 768px;
+$tablet: 1024px;
+
+@mixin max-screen($break-point) {
+  @media screen and (max-width:$break-point) {
+    @content;
+  }
+}
+
+@mixin min-screen($break-point) {
+  @media screen and (min-width:$break-point) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width:($breakP)) {
+    @content;
+  }
+}
+
+@mixin pc {
+  @media screen and (min-width:($breakP)) {
+    @content;
+  }
+}
+
+@mixin lhCrop($lineHeight) {
+  line-height: $lineHeight;
+
+  &:before {
+    content: '';
+    margin-top: calc((1 - #{$lineHeight}) * .5em);
+  }
+
+  &:after {
+    margin-bottom: calc((1 - #{$lineHeight}) * .5em);
+  }
+
+  &:before,
+  &:after {
+    content: '';
+    display: block;
+    height: 0;
+    width: 0;
+  }
+}
+
+@mixin hover {
+  @include pc {
+
+    &:hover {
+      @content;
+    }
+  }
+
+  @media (hover:hover) and (pointer:fine) {
+
+    &:hover {
+      @content;
+    }
+  }
+}
+
+@mixin truncate($width: 100%) {
+  display: block;
+  max-width: 100%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: $width;
+}
+
+
+@mixin u-aspect-ratio($width: 1, $height: 1) {
+  padding-bottom: ($height / $width) * 100%;
+}
+
+
+
+@mixin u-scrollable( $direction: h
+
+
+) {
+  -webkit-overflow-scrolling: touch;
+
+  @if ($direction==h) {
+    overflow-x: auto;
+    overflow-y: hidden;
+  }
+
+  @else {
+    overflow-x: hidden;
+    overflow-y: auto;
+  }
+}
+
+
+@mixin u-ellipsis-inline() {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@mixin u-ellipsis-multiline($linenum: 2) {
+  -webkit-box-orient: vertical;
+  display: -webkit-box;
+  -webkit-line-clamp: $linenum;
+  overflow: hidden;
+}
+
+@mixin u-clearfix() {
+  zoom: 1;
+
+  &:after {
+    clear: both;
+    content: '';
+    display: block;
+  }
+}

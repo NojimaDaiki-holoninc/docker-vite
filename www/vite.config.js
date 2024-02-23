@@ -5,7 +5,7 @@ import { fileURLToPath } from 'node:url';//上記の実行時にURLをpathに変
 import { ViteEjsPlugin } from "vite-plugin-ejs";
 import json from "./src/lib/pagedata/data.json";
 
-  const inputJsArray = globSync('src/**/*.js', { ignore: 
+  const inputJsArray = globSync('src/common/js/**/*.js', { ignore: 
     ['node_modules/**','**/modules/**','**/html/**'] }).map(file => {
     return [
       path.relative(
@@ -25,7 +25,7 @@ import json from "./src/lib/pagedata/data.json";
       fileURLToPath(new URL(file, import.meta.url))    
     ]
   });
-  const inputScssArray = globSync('src/scss/**/*.scss', { ignore: ['src/scss/**/_*.scss'] }).map(file => {
+  const inputScssArray = globSync('src/common/css/**/*.scss', { ignore: ['src/common/css/**/_*.scss'] }).map(file => {
     return [
       path.relative(
         'src',

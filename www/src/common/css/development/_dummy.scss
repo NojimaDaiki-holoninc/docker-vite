@@ -1,0 +1,47 @@
+.dummyArea {
+    align-items: center;
+    background-color: #aaaaaa;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+
+    @include min-screen($breakP) {
+        height: 600px;
+        margin-top: 40px;
+        padding: 20px;
+    }
+
+    @include max-screen($breakP) {
+        height: 300px;
+        margin-top: 20px;
+        padding: 20px 40px;
+    }
+
+    &__content {
+        letter-spacing: .15em;
+
+        @include min-screen($breakP) {
+            font-size: 18px;
+            line-height: calc(30 / 18);
+        }
+
+        @include max-screen($breakP) {
+            font-size: 15px;
+            line-height: calc(50 / 30);
+        }
+    }
+}
+
+
+.dummyArea02 {
+    max-width: 840px;
+    margin: 60px auto;
+
+    &__item {
+        & + .dummyArea02__item {
+            margin-top: 80px;
+        }
+    }
+}

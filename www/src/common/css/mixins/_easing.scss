@@ -1,0 +1,105 @@
+@mixin transition-base($property: all, $duration: 1s, $delay: 0s) {
+  transition-delay: $delay;
+  transition-duration: $duration;
+  transition-property: $property;
+}
+
+@mixin ease-in-sine() {
+  transition-timing-function: cubic-bezier(.47, 0, .745, .715);
+}
+
+@mixin ease-out-sine() {
+  transition-timing-function: cubic-bezier(.39, .575, .565, 1);
+}
+
+@mixin ease-in-out-sine() {
+  transition-timing-function: cubic-bezier(.445, .05, .55, .95);
+}
+
+@mixin ease-in-quad() {
+  transition-timing-function: cubic-bezier(.55, .085, .68, .53);
+}
+
+@mixin ease-out-quad() {
+  transition-timing-function: cubic-bezier(.25, .46, .45, .94);
+}
+
+@mixin ease-in-out-quad() {
+  transition-timing-function: cubic-bezier(.455, .03, .515, .955);
+}
+
+@mixin ease-in-cubic() {
+  transition-timing-function: cubic-bezier(.55, .055, .675, .19);
+}
+
+@mixin ease-out-cubic() {
+  transition-timing-function: cubic-bezier(.215, .61, .355, 1);
+}
+
+@mixin ease-in-out-cubic() {
+  transition-timing-function: cubic-bezier(.645, .045, .355, 1);
+}
+
+@mixin ease-in-quart() {
+  transition-timing-function: cubic-bezier(.895, .03, .685, .22);
+}
+
+@mixin ease-out-quart() {
+  transition-timing-function: cubic-bezier(.165, .84, .44, 1);
+}
+
+@mixin ease-in-out-quart() {
+  transition-timing-function: cubic-bezier(.77, 0, .175, 1);
+}
+
+@mixin ease-in-quint() {
+  transition-timing-function: cubic-bezier(.755, .05, .855, .06);
+}
+
+@mixin ease-out-quint() {
+  transition-timing-function: cubic-bezier(.23, 1, .32, 1);
+}
+
+@mixin ease-in-out-quint() {
+  transition-timing-function: cubic-bezier(.86, 0, .07, 1);
+}
+
+@mixin ease-in-expo() {
+  transition-timing-function: cubic-bezier(.95, .05, .795, .035);
+}
+
+@mixin ease-out-expo() {
+  transition-timing-function: cubic-bezier(.19, 1, .22, 1);
+}
+
+@mixin ease-in-out-expo() {
+  transition-timing-function: cubic-bezier(1, 0, 0, 1);
+}
+
+@mixin ease-in-circ() {
+  transition-timing-function: cubic-bezier(.6, .04, .98, .335);
+}
+
+@mixin ease-out-circ() {
+  transition-timing-function: cubic-bezier(.075, .82, .165, 1);
+}
+
+@mixin ease-in-out-circ() {
+  transition-timing-function: cubic-bezier(.785, .135, .15, .86);
+}
+
+@mixin ease-in-back() {
+  transition-timing-function: cubic-bezier(.6, -.28, .735, .045);
+}
+
+@mixin ease-out-back() {
+  transition-timing-function: cubic-bezier(.175, .885, .32, 1.275);
+}
+
+@mixin ease-in-out-back() {
+  transition-timing-function: cubic-bezier(.68, -.55, .265, 1.55);
+}
+
+@mixin ease-customize-01() {
+  transition-timing-function: cubic-bezier(.46, .1, .29, 1) !important;
+}
