@@ -1,0 +1,9 @@
+<header class="st-glb_pageHeader">
+  <h1 class="st-glb_pageHeader-title">
+      <%= data[slug].title %>
+  </h1>
+  <p class="st-glb_pageHeader-description">
+      <% const headerDescription = data[slug].description.replace(/(\r)?\n/g, '<br>'); %>
+      <%- headerDescription; %>
+  </p>
+</header>

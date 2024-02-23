@@ -1,0 +1,14 @@
+{
+  "data": {
+      "home": {
+          "title" : "HOME PAGE ですよ",
+          "description": "HOMEページの概要をここに記述します。\nHOMEページの概要をここに記述します。",
+          "ogimage": "[HOMEのog:image用ファイル名].jpg"
+      },
+      "aboutus": {
+          "title" : "about usですよ",
+          "description": "about usページの概要をここに記述します。",
+          "ogimage": "[aboutusのog:image用ファイル名].jpg"
+      }
+  }
+}

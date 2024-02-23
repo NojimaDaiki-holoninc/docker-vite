@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<%_
+/**
+ * ページデータ設定
+ */
+  const metaInfo = {
+    slug: "home",
+    rootDirectory: "./"
+  };
+_%>
+<html lang="ja">
+  <head>
+    <%- include('lib/components/metadata',metaInfo); %>
+    <link rel="stylesheet" href="<%= metaInfo.rootDirectory %>scss/style/style.scss">
+    <script type="module" defer src="<%= metaInfo.rootDirectoryt %>js/main.js"></script>
+    <script type="module" defer src="<%= metaInfo.rootDirectory %>js/test.js"></script>
+  </head>
+  <body> 
+    <main class="st-glb_mainContent">
+      <article class="st-glb_mainContent-article">
+        <%- include('lib/components/header', metaInfo); %>
+      </article>
+    </main>
+  </body>
+</html>
